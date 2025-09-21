@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌦️ Weather Dashboard</h1>
+
+    <div class="controls">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button id="searchBtn">Search</button>
+      <button id="toggleMode">🌙</button>
+    </div>
+
+    <div id="weather">
+      <p>Enter a city to see the weather.</p>
+    </div>
+
+    <h2>Hourly Forecast (Next 24h)</h2>
+    <div id="forecast" class="forecast"></div>
+
+    <h2>3-Day Forecast</h2>
+    <div id="forecast3day" class="forecast3day"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

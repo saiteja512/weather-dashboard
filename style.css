@@ -1,0 +1,115 @@
+:root {
+  --bg-color: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  --text-color: #333;
+  --card-bg: rgba(255,255,255,0.95);
+  --card-shadow: rgba(0,0,0,0.2);
+}
+
+body.dark {
+  --bg-color: linear-gradient(to right, #2c3e50, #4ca1af);
+  --text-color: #f4f4f4;
+  --card-bg: rgba(52, 73, 94, 0.95);
+  --card-shadow: rgba(0,0,0,0.5);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--card-shadow);
+  max-width: 700px;
+  width: 95%;
+  transition: background 0.5s ease, color 0.5s ease;
+  color: var(--text-color);
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+.controls input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.controls button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #ffb347;
+  background: linear-gradient(to right, #ffcc33, #ff6b6b);
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+}
+
+#weather {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.forecast, .forecast3day {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.forecast-hour, .forecast-day {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 3px 10px var(--card-shadow);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.5s ease, color 0.5s ease;
+  color: var(--text-color);
+}
+
+.forecast-hour:hover, .forecast-day:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,1);
+}
+
+.hourly-entry {
+  border-top: 1px solid #ccc;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+img.weather-icon {
+  width: 50px;
+  height: 50px;
+}
